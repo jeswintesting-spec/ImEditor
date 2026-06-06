@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Background -->
+  <rect width="256" height="256" fill="#0f172a" rx="64"/>
+  
+  <!-- Image Frame -->
+  <rect x="50" y="50" width="156" height="156" rx="20" fill="none" stroke="#6366f1" stroke-width="16"/>
+  
+  <!-- Mountain / Image Graphic -->
+  <path d="M50 206 L110 130 L150 180 L180 150 L206 185" fill="none" stroke="#38bdf8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Sun / Sun Graphic -->
+  <circle cx="160" cy="100" r="16" fill="#38bdf8" />
+  
+  <!-- Crop marks -->
+  <path d="M30 70 L30 30 L70 30" fill="none" stroke="#f472b6" stroke-width="16" stroke-linecap="round"/>
+  <path d="M226 186 L226 226 L186 226" fill="none" stroke="#f472b6" stroke-width="16" stroke-linecap="round"/>
+</svg>
