@@ -605,28 +605,77 @@ function App() {
       </header>
 
       {images.length === 0 ? (
-        <div 
-          className={`upload-area glass-panel ${dragActive ? 'drag-active' : ''}`}
-          onDragEnter={handleDrag}
-          onDragLeave={handleDrag}
-          onDragOver={handleDrag}
-          onDrop={handleDrop}
-          onClick={() => fileInputRef.current?.click()}
-        >
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept="image/*"
-            multiple
-            style={{ display: 'none' }}
-            onChange={handleChange}
-          />
-          <UploadCloud size={64} className="upload-icon" />
-          <h2>{t('upload_text')}</h2>
-          <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
-            {t('upload_subtext')}
-          </p>
-        </div>
+        <>
+          <div 
+            className={`upload-area glass-panel ${dragActive ? 'drag-active' : ''}`}
+            onDragEnter={handleDrag}
+            onDragLeave={handleDrag}
+            onDragOver={handleDrag}
+            onDrop={handleDrop}
+            onClick={() => fileInputRef.current?.click()}
+          >
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              multiple
+              style={{ display: 'none' }}
+              onChange={handleChange}
+            />
+            <UploadCloud size={64} className="upload-icon" />
+            <h2>{t('upload_text')}</h2>
+            <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
+              {t('upload_subtext')}
+            </p>
+          </div>
+
+          <div className="info-section animate-fade-in">
+            <h3 className="info-title">{t('uses_title')}</h3>
+            <div className="uses-grid">
+              <div className="use-card">
+                <div className="use-icon-wrapper">
+                  <ImageIcon size={22} />
+                </div>
+                <h4>{t('use_passport_title')}</h4>
+                <p>{t('use_passport_desc')}</p>
+              </div>
+
+              <div className="use-card">
+                <div className="use-icon-wrapper">
+                  <Wand2 size={22} />
+                </div>
+                <h4>{t('use_sig_title')}</h4>
+                <p>{t('use_sig_desc')}</p>
+              </div>
+
+              <div className="use-card">
+                <div className="use-icon-wrapper">
+                  <Layers size={22} />
+                </div>
+                <h4>{t('use_enhance_title')}</h4>
+                <p>{t('use_enhance_desc')}</p>
+              </div>
+
+              <div className="use-card">
+                <div className="use-icon-wrapper">
+                  <Printer size={22} />
+                </div>
+                <h4>{t('use_print_title')}</h4>
+                <p>{t('use_print_desc')}</p>
+              </div>
+            </div>
+
+            <div className="privacy-banner">
+              <div className="privacy-icon-wrapper">
+                <Settings size={22} />
+              </div>
+              <div className="privacy-text">
+                <h4>{t('about_title')}</h4>
+                <p>{t('about_description')}</p>
+              </div>
+            </div>
+          </div>
+        </>
       ) : (
         <div className="main-content">
           <div className="preview-container">

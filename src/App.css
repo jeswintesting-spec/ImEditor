@@ -252,4 +252,126 @@
     padding: 2rem 1rem;
     min-height: 200px;
   }
+  
+  .uses-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .privacy-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
+
+/* Info & Uses Styles */
+.info-section {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.info-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.uses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.use-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.use-card:hover {
+  transform: translateY(-4px);
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+.use-icon-wrapper {
+  padding: 0.65rem;
+  border-radius: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.use-card:hover .use-icon-wrapper {
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.use-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.use-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.privacy-banner {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: left;
+  margin-top: 3rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.privacy-icon-wrapper {
+  padding: 0.75rem;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.privacy-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.privacy-text p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
 }
